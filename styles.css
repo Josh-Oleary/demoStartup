@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    opacity: .75;
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 100px 0;
+    animation: 1s fadein .5s forwards;
+    opacity: 0;
+}
+
+@keyframes fadein {
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+header h2 {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+header nav {
+    display: flex;
+    margin-right: -15px;
+}
+
+header nav li {
+    margin: 0 15px
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    padding-top: 15rem;
+    min-height: 100vh;
+}
+
+.hero-content-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: 1s fadein .5s forwards;
+    opacity: 0;
+    position: relative;
+    top: 2rem;
+    color: rgb(255, 255, 255);
+}
+.hero .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-color: #80a3db;
+    image-rendering: crisp-edges;
+}
+.hero h1 h3 {
+    font-family: 'Fira Sans', sans-serif;
+}
+ul {
+    list-style: none;
+}
+
+.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+hr {
+    width: 250px;
+    height: 3px;
+    background-color: #1da1c2;
+    border: 0;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+section h3.title {
+    text-transform: capitalize;
+    font: bold 32px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+section.destinations {
+    margin-top: 60px;
+}
+
+section:not(.hero):nth-child(even){
+    background-color: rgb(220, 241, 248);
+}
+section p {
+    max-width: 775px;
+    line-height: 2;
+    padding: 0 20px;
+    margin: auto;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.destinations .grid li {
+    height: 350px;
+    padding: 20px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.destinations .grid li.small {
+    flex-basis: 30%;
+}
+.destinations .grid li.large {
+    flex-basis: 70%;
+}
+
+.packages .grid li {
+    padding: 50px;
+    flex-basis: 50%;
+    text-align: center;
+}
+.packages .grid li i {
+    color: darkblue;
+}
+
+.testimonials .quote {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    
+}
+.testimonials .author {
+    font-style: italic;
+    font-size: 15px;
+}
